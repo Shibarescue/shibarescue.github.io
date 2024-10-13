@@ -1,2 +1,3 @@
-# shibarescue.github.io
-shiba staging 
+# dirjax.github.io/shibarescue
+
+Shiba rescue staging omgeving
