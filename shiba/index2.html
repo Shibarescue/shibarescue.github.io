@@ -1,190 +1,380 @@
 
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head><style>
 <head><style>
 /*---- CROSS BROWSER DROPDOWN MENU ----*/
+/*---- CROSS BROWSER DROPDOWN MENU ----*/
+ul#nav {margin: 0 0 0 200px;}
 ul#nav {margin: 0 0 0 200px;}
 ul.drop a { display:block; color: #fff; font-family: Verdana; font-size: 14px; text-decoration: none;}
+ul.drop a { display:block; color: #fff; font-family: Verdana; font-size: 14px; text-decoration: none;}
+ul.drop, ul.drop li, ul.drop ul { list-style: none; margin: 0; padding: 0; border: 1px solid #fff; background: #555; color: #fff;}
 ul.drop, ul.drop li, ul.drop ul { list-style: none; margin: 0; padding: 0; border: 1px solid #fff; background: #555; color: #fff;}
 ul.drop { position: relative; z-index: 597; float: left; }
+ul.drop { position: relative; z-index: 597; float: left; }
+ul.drop li { float: left; line-height: 1.3em; vertical-align: middle; zoom: 1; padding: 5px 10px; }
 ul.drop li { float: left; line-height: 1.3em; vertical-align: middle; zoom: 1; padding: 5px 10px; }
 ul.drop li.hover, ul.drop li:hover { position: relative; z-index: 599; cursor: default; background: #1e7c9a; }
+ul.drop li.hover, ul.drop li:hover { position: relative; z-index: 599; cursor: default; background: #1e7c9a; }
+ul.drop ul { visibility: hidden; position: absolute; top: 100%; left: 0; z-index: 598; width: 195px; background: #555; border: 1px solid #fff; }
 ul.drop ul { visibility: hidden; position: absolute; top: 100%; left: 0; z-index: 598; width: 195px; background: #555; border: 1px solid #fff; }
 ul.drop ul li { float: none; }
+ul.drop ul li { float: none; }
+ul.drop ul ul { top: -2px; left: 100%; }
 ul.drop ul ul { top: -2px; left: 100%; }
 ul.drop li:hover > ul { visibility: visible }
+ul.drop li:hover > ul { visibility: visible }
+</style>
 </style>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- TemplateBeginEditable name="doctitle" -->
 <!-- TemplateBeginEditable name="doctitle" -->
 <title>De Shiba - Een verzamelpunt van informatie voor de rasliefhebbers</title>
+<title>De Shiba - Een verzamelpunt van informatie voor de rasliefhebbers</title>
+<!-- TemplateEndEditable -->
 <!-- TemplateEndEditable -->
 <!-- TemplateBeginEditable name="head" -->
+<!-- TemplateBeginEditable name="head" -->
+<!-- TemplateEndEditable -->
 <!-- TemplateEndEditable -->
 <style type="text/css">
+<style type="text/css">
+<!--
 <!--
 body {
+body {
+	font: 100% Verdana, Arial, Helvetica, sans-serif;
 	font: 100% Verdana, Arial, Helvetica, sans-serif;
 	background: #f6f6f6;
+	background: #f6f6f6;
+	margin: 0; /* het is een goede gewoonte om de instellingen voor margin (marge) en padding (opvulling) van het element body op nul in te stellen en daarmee op de standaardinstellingen van de verschillende browsers */
 	margin: 0; /* het is een goede gewoonte om de instellingen voor margin (marge) en padding (opvulling) van het element body op nul in te stellen en daarmee op de standaardinstellingen van de verschillende browsers */
 	padding: 0;
+	padding: 0;
+	text-align: center; /* hiermee centreert u de container (het hoofdobject) in IE 5*-browsers Vervolgens wordt de tekst ingesteld op de standaardinstelling van links uitlijnen in de kiezer #container */
 	text-align: center; /* hiermee centreert u de container (het hoofdobject) in IE 5*-browsers Vervolgens wordt de tekst ingesteld op de standaardinstelling van links uitlijnen in de kiezer #container */
 	color: #000000;
+	color: #000000;
+}
 }
 .oneColLiqCtrHdr #container {
+.oneColLiqCtrHdr #container {
+	width: 70%;  /* hiermee maakt u een container (hoofdobject) met 80% van de breedte van de browser */
 	width: 70%;  /* hiermee maakt u een container (hoofdobject) met 80% van de breedte van de browser */
 	background: #FFFFFF;
+	background: #FFFFFF;
+	margin: 0 auto; /* de automatische marges (d.m.v. auto), in combinatie met een breedte, centreren de pagina */
 	margin: 0 auto; /* de automatische marges (d.m.v. auto), in combinatie met een breedte, centreren de pagina */
 	border: 1px solid #ffffff;
+	border: 1px solid #ffffff;
+	text-align: left; /* hiermee wordt de instelling text-align: center voor het element body genegeerd. */
 	text-align: left; /* hiermee wordt de instelling text-align: center voor het element body genegeerd. */
 }
+}
+.oneColLiqCtrHdr #header {
 .oneColLiqCtrHdr #header {
 	background: #ffffff; 
+	background: #ffffff; 
+	padding: 0 10px 0 20px;  /* deze instelling voor padding (opvulling) komt overeen met de uitlijning links van de elementen binnen de div-elementen, die volgen op deze padding. Als een afbeelding wordt gebruikt in de #header in plaats van tekst, wilt u wellicht de padding (opvulling) verwijderen. */
 	padding: 0 10px 0 20px;  /* deze instelling voor padding (opvulling) komt overeen met de uitlijning links van de elementen binnen de div-elementen, die volgen op deze padding. Als een afbeelding wordt gebruikt in de #header in plaats van tekst, wilt u wellicht de padding (opvulling) verwijderen. */
 }
+}
+.oneColLiqCtrHdr #header h1 {
 .oneColLiqCtrHdr #header h1 {
 	margin: 0; /* door de marge van het laatste element in het element div voor #header op 0 in te stellen voorkomt u het wegvallen van marges – een onverklaarbare ruimte tussen div-elementen. Als om het element div een rand loopt, is dit niet nodig aangezien dit tevens het wegvallen van de marge voorkomt */
+	margin: 0; /* door de marge van het laatste element in het element div voor #header op 0 in te stellen voorkomt u het wegvallen van marges – een onverklaarbare ruimte tussen div-elementen. Als om het element div een rand loopt, is dit niet nodig aangezien dit tevens het wegvallen van de marge voorkomt */
+	padding: 10px 0; /* door het gebruik van padding (opvulling) in plaats van een marge (via het element margin) kunt u het element van de randen van het element div vandaan houden */
 	padding: 10px 0; /* door het gebruik van padding (opvulling) in plaats van een marge (via het element margin) kunt u het element van de randen van het element div vandaan houden */
 }
+}
+.oneColLiqCtrHdr #mainContent {
 .oneColLiqCtrHdr #mainContent {
 	padding: 0 20px; /* vergeet niet dat onder padding (opvulling) wordt verstaan de ruimte binnen in het vak van het element div, terwijl margin (marge) betrekking heeft op de ruimte buiten het vak van het element div */
+	padding: 0 20px; /* vergeet niet dat onder padding (opvulling) wordt verstaan de ruimte binnen in het vak van het element div, terwijl margin (marge) betrekking heeft op de ruimte buiten het vak van het element div */
+	background: #FFFFFF;
 	background: #FFFFFF;
 }
+}
+.oneColLiqCtrHdr #footer { 
 .oneColLiqCtrHdr #footer { 
 	padding: 0 10px; /* deze instelling voor padding (opvulling) komt overeen met de uitlijning links van de elementen binnen de div-elementen, die voorafgaan aan deze padding. */
+	padding: 0 10px; /* deze instelling voor padding (opvulling) komt overeen met de uitlijning links van de elementen binnen de div-elementen, die voorafgaan aan deze padding. */
+	background:#DDDDDD;
 	background:#DDDDDD;
 } 
+} 
+.oneColLiqCtrHdr #footer p {
 .oneColLiqCtrHdr #footer p {
 	margin: 0; /* door de marges van het eerste element in de footer (voettekst) in te stellen op 0 vermijdt u het risico dat de marge wegvalt – een ruimte tussen div-elementen */
+	margin: 0; /* door de marges van het eerste element in de footer (voettekst) in te stellen op 0 vermijdt u het risico dat de marge wegvalt – een ruimte tussen div-elementen */
+	padding: 10px 0; /* door het gebruik van padding (opvulling) voor dit element maakt u ruimte (op dezelfde manier als door middel van een marge), zonder het probleem van wegvallende marges */
 	padding: 10px 0; /* door het gebruik van padding (opvulling) voor dit element maakt u ruimte (op dezelfde manier als door middel van een marge), zonder het probleem van wegvallende marges */
 }
+}
+ul.drop1 {list-style: none; margin: 0; padding: 0; border: 1px solid #fff; background: #555; color: #fff;}
 ul.drop1 {list-style: none; margin: 0; padding: 0; border: 1px solid #fff; background: #555; color: #fff;}
 ul.drop1 {position: relative; z-index: 597; float: left; }
+ul.drop1 {position: relative; z-index: 597; float: left; }
+-->
 -->
 </style></head>
+</style></head>
+
 
 <body class="oneColLiqCtrHdr">
+<body class="oneColLiqCtrHdr">
+<div id="container">
 <div id="container">
   <div id="header">
+  <div id="header">
+    <h1 align="center"><FONT color=#990000>De Shiba</FONT></h1> 
     <h1 align="center"><FONT color=#990000>De Shiba</FONT></h1> 
     <div align="center">
+    <div align="center">
+     <pre><FONT color=#cc6600><b>Alles wat je altijd al wilde weten over dit ras</b><br /></FONT><em><FONT color=#cbcaca>In samenwerking met Shiba rescue</FONT></em></pre>
      <pre><FONT color=#cc6600><b>Alles wat je altijd al wilde weten over dit ras</b><br /></FONT><em><FONT color=#cbcaca>In samenwerking met Shiba rescue</FONT></em></pre>
 
+
+<ul id="nav" class="drop">
 <ul id="nav" class="drop">
   <li><a href="#">Home</a></li>
+  <li><a href="#">Home</a></li>
+  <li>De Shiba
   <li>De Shiba
     <ul>
+    <ul>
+      <li><a href="#">Geschiedenis</a></li>
       <li><a href="#">Geschiedenis</a></li>
       <li><a href="#">Karakter</a></li>
+      <li><a href="#">Karakter</a></li>
+      <li><a href="#">Uiterlijk</a></li>
       <li><a href="#">Uiterlijk</a></li>
       <li><a href="#">Aanschaf</a>
+      <li><a href="#">Aanschaf</a>
+        <ul>
         <ul>
           <li><a href="#">Puppy</a>
+          <li><a href="#">Puppy</a>
+            <ul>
             <ul>
               <li>Waar op te letten</li>
+              <li>Waar op te letten</li>
+              <li>De verenigingen</li>
               <li>De verenigingen</li>
               <li>De eerste weken</li>
+              <li>De eerste weken</li>
+              <li>Socialisatie</li>
               <li>Socialisatie</li>
             </ul>
-          </li>
-          <li><a href="#">Herplaatser</a></li>
-        </ul>
-      </li>
-      <li><a href="#">Weetjes</a></li>
-    </ul>
-  </li>
-  <li>Gezondheid
-    <ul>
-      <li><a href="#">Erfelijke punten</a></li>
-      <li><a href="#">Verzorging</a></li>
-      <li><a href="#">Voeding</a></a>
-        <ul>
-          <li><a href="#">Vers</a>
-            <ul>
-              <li>Online bestelpunten</li>
-              <li>Op reis met vers voer</li>
             </ul>
           </li>
+          </li>
+          <li><a href="#">Herplaatser</a></li>
+          <li><a href="#">Herplaatser</a></li>
+        </ul>
+        </ul>
+      </li>
+      </li>
+      <li><a href="#">Weetjes</a></li>
+      <li><a href="#">Weetjes</a></li>
+    </ul>
+    </ul>
+  </li>
+  </li>
+  <li>Gezondheid
+  <li>Gezondheid
+    <ul>
+    <ul>
+      <li><a href="#">Erfelijke punten</a></li>
+      <li><a href="#">Erfelijke punten</a></li>
+      <li><a href="#">Verzorging</a></li>
+      <li><a href="#">Verzorging</a></li>
+      <li><a href="#">Voeding</a></a>
+      <li><a href="#">Voeding</a></a>
+        <ul>
+        <ul>
+          <li><a href="#">Vers</a>
+          <li><a href="#">Vers</a>
+            <ul>
+            <ul>
+              <li>Online bestelpunten</li>
+              <li>Online bestelpunten</li>
+              <li>Op reis met vers voer</li>
+              <li>Op reis met vers voer</li>
+            </ul>
+            </ul>
+          </li>
+          </li>
+          <li><a href="#">Brokken</a></li>
           <li><a href="#">Brokken</a></li>
           <li><a href="#">Tussendoortjes</a></li>
+          <li><a href="#">Tussendoortjes</a></li>
         </ul>
+        </ul>
+      </li>
       </li>
       <li><a href="#">Ziek, wat nu?</a></li>
+      <li><a href="#">Ziek, wat nu?</a></li>
     </ul>
+    </ul>
+  </li>
   </li>
   <li>Opvoeding
+  <li>Opvoeding
+    <ul>
     <ul>
       <li class="dir"><a href="#">Templates</a></li>
+      <li class="dir"><a href="#">Templates</a></li>
+      <li class="dir"><a href="#">Stock Images</a>
       <li class="dir"><a href="#">Stock Images</a>
         <ul>
+        <ul>
+          <li><a href="#">Category 1</a></li>
           <li><a href="#">Category 1</a></li>
           <li><a href="#">Category 2</a></li>
+          <li><a href="#">Category 2</a></li>
+          <li><a href="#">Category 3</a></li>
           <li><a href="#">Category 3</a></li>
           <li><a href="#">Category 4</a></li>
+          <li><a href="#">Category 4</a></li>
+          <li><a href="#">Category 5</a></li>
           <li><a href="#">Category 5</a></li>
         </ul>
+        </ul>
+      </li>
       </li>
       <li><a href="#">Featured</a></li>
+      <li><a href="#">Featured</a></li>
+      <li><a href="#">Top Rated</a></li>
       <li><a href="#">Top Rated</a></li>
       <li><a href="#">Resources</a></li>
+      <li><a href="#">Resources</a></li>
     </ul>
+    </ul>
+  </li>
   </li>
   <li><a href="#">Gallery</a></li>
+  <li><a href="#">Gallery</a></li>
+  <li>Contact Us
   <li>Contact Us
     <ul>
+    <ul>
+      <li><a href="#">Contact Form</a></li>
       <li><a href="#">Contact Form</a></li>
       <li><a href="#">How to get here</a></li>
+      <li><a href="#">How to get here</a></li>
+      <li><a href="#">View the map</a></li>
       <li><a href="#">View the map</a></li>
     </ul>
+    </ul>
   </li>
+  </li>
+</ul>
 </ul>
 
 
+
+
+      </pre>
       </pre>
     
+    
+    </div>
     </div>
     </size>
+    </size>
+  <!-- end #header --></div>
   <!-- end #header --></div>
   <div id="mainContent">
+  <div id="mainContent">
+<div></div>
 <div></div>
 <p></p>
+<p></p>
+    <h1>&nbsp;</h1>
     <h1>&nbsp;</h1>
     <p align="left"><font size="2"><strong><font color="#990000"><U>De Shiba in onze maatschappij</U></font></strong></font></p>
+    <p align="left"><font size="2"><strong><font color="#990000"><U>De Shiba in onze maatschappij</U></font></strong></font></p>
+    <p align="center"><font size="2"><strong><img src="http://i20.photobucket.com/albums/b239/missy_tammy/1-14.jpg" alt="" width="311" height="222" style="WIDTH: 317px; HEIGHT: 222px" /></strong></font></p>
     <p align="center"><font size="2"><strong><img src="http://i20.photobucket.com/albums/b239/missy_tammy/1-14.jpg" alt="" width="311" height="222" style="WIDTH: 317px; HEIGHT: 222px" /></strong></font></p>
     <font size="2"><strong><FONT size=2> </strong></font>
+    <font size="2"><strong><FONT size=2> </strong></font>
+    <p align="center">&nbsp;</p>
     <p align="center">&nbsp;</p>
     <p align="left"><font size="2"><strong><span lang=""><font color="#000000">De Shiba is een geweldig ras waar veel mensen bij het eerste aanblik promp voor vallen.<br />
+    <p align="left"><font size="2"><strong><span lang=""><font color="#000000">De Shiba is een geweldig ras waar veel mensen bij het eerste aanblik promp voor vallen.<br />
+      Met hun vleugje natuurlijk charme, trots en zelfstandigheid lijken zij&nbsp;de ideale hond&nbsp;voor verschillende situaties. </font></span></strong></font></p>
       Met hun vleugje natuurlijk charme, trots en zelfstandigheid lijken zij&nbsp;de ideale hond&nbsp;voor verschillende situaties. </font></span></strong></font></p>
     <p align="left"><font size="2"><strong><span lang=""><font color="#cc6633">Is dit het geval? kan men de&nbsp;Shiba echt overal, in eender welke situatie, als huisgenoot aanschaffen?</font></span></strong></font></p>
+    <p align="left"><font size="2"><strong><span lang=""><font color="#cc6633">Is dit het geval? kan men de&nbsp;Shiba echt overal, in eender welke situatie, als huisgenoot aanschaffen?</font></span></strong></font></p>
+    <p align="left"><font size="2"><strong><span lang=""><font color="#000000">Deze vraag is moeilijk te beantwoorden en hangt volledig af van de inzet van het baasje en de fokker van de hond.</font></span></strong></font></p>
     <p align="left"><font size="2"><strong><span lang=""><font color="#000000">Deze vraag is moeilijk te beantwoorden en hangt volledig af van de inzet van het baasje en de fokker van de hond.</font></span></strong></font></p>
     <p align="left"><font size="2"><strong><span lang=""><font color="#000000">Jawel, de Shiba past zich in verschillende omstandigheden aan.<br />
+    <p align="left"><font size="2"><strong><span lang=""><font color="#000000">Jawel, de Shiba past zich in verschillende omstandigheden aan.<br />
+      Nee, dit wilt niet zeggen dat het een ras is dat minder aandacht verwacht dan eender ander ras. <br />
       Nee, dit wilt niet zeggen dat het een ras is dat minder aandacht verwacht dan eender ander ras. <br />
       Integendeel, zij hebben een goede portie aandacht, opvoeding en genegenheid nodig.</font></span></strong></font></p>
+      Integendeel, zij hebben een goede portie aandacht, opvoeding en genegenheid nodig.</font></span></strong></font></p>
+    <p align="center"><font size="2"><strong><span lang=""><img src="http://i20.photobucket.com/albums/b239/missy_tammy/DSC02360a.jpg" alt="" width="366" height="252" style="WIDTH: 345px; HEIGHT: 260px" /></span></strong></font></p>
     <p align="center"><font size="2"><strong><span lang=""><img src="http://i20.photobucket.com/albums/b239/missy_tammy/DSC02360a.jpg" alt="" width="366" height="252" style="WIDTH: 345px; HEIGHT: 260px" /></span></strong></font></p>
     <strong><font size="2"><SPAN lang=""> </font></strong>
+    <strong><font size="2"><SPAN lang=""> </font></strong>
+    <p align="left"><font size="2"><strong><span lang=""><font color="#cc6633">Is de Shiba een beginnershond?</font></span></strong></font></p>
     <p align="left"><font size="2"><strong><span lang=""><font color="#cc6633">Is de Shiba een beginnershond?</font></span></strong></font></p>
     <p align="left"><font size="2"><strong><font color="#000000"><span lang="">Vroegen vond ik van niet maar ondertussen ben ik daarop teruggekomen&nbsp;onder voorbehoud van enkele belangrijke punten om rekening mee te houden. De fokkerskeuze, inzet als baas en of de&nbsp;thuissituatie gepast is om dit ras aan te schaffen. Bij bezoek aan een goede fokker zal een&nbsp;zoekende partij hierin veel raad krijgen.</span></font></strong></font></p>
+    <p align="left"><font size="2"><strong><font color="#000000"><span lang="">Vroegen vond ik van niet maar ondertussen ben ik daarop teruggekomen&nbsp;onder voorbehoud van enkele belangrijke punten om rekening mee te houden. De fokkerskeuze, inzet als baas en of de&nbsp;thuissituatie gepast is om dit ras aan te schaffen. Bij bezoek aan een goede fokker zal een&nbsp;zoekende partij hierin veel raad krijgen.</span></font></strong></font></p>
+    <p align="left"><font size="2"><strong><span lang=""><font color="#cc6633">Wat met opvoeding?</font></span></strong></font></p>
     <p align="left"><font size="2"><strong><span lang=""><font color="#cc6633">Wat met opvoeding?</font></span></strong></font></p>
     <p align="left"><font size="2"><strong><span lang=""><font color="#000000">Als de noden en opvoeding van de Shiba goed onderhouden worden zal de hond evenwichtig zijn. Indien de Shiba vol opgekropte energie zit, kan die mogelijk gedragsproblemen ontwikkelen. Vraag bij de eerste tekenen raad aan u fokker of iemand die kennis heeft van het ras.</font></span></strong></font></p>
+    <p align="left"><font size="2"><strong><span lang=""><font color="#000000">Als de noden en opvoeding van de Shiba goed onderhouden worden zal de hond evenwichtig zijn. Indien de Shiba vol opgekropte energie zit, kan die mogelijk gedragsproblemen ontwikkelen. Vraag bij de eerste tekenen raad aan u fokker of iemand die kennis heeft van het ras.</font></span></strong></font></p>
+    <p align="left"><font size="2"><strong><font color="#000000"><span lang="">Een Shiba is erg slim en leergierig. Als men weet hoe hun interesse te wekken kunnen ze ver geraken in verschillende disciplines. Een beloningsgerichte, positieve opvoeding is erg belangrijk voor dit ras. Een harde aanpak en mening opdringen zal het vertrouwen van u shiba volledig teniet doen wat jaren vraagt om terug op te bouwen.</span></font></strong></font></p>
     <p align="left"><font size="2"><strong><font color="#000000"><span lang="">Een Shiba is erg slim en leergierig. Als men weet hoe hun interesse te wekken kunnen ze ver geraken in verschillende disciplines. Een beloningsgerichte, positieve opvoeding is erg belangrijk voor dit ras. Een harde aanpak en mening opdringen zal het vertrouwen van u shiba volledig teniet doen wat jaren vraagt om terug op te bouwen.</span></font></strong></font></p>
     <p align="left"><font size="2"><strong><span lang=""><font color="#000000">Ga kijken naar hondenscholen met een positieve aanpak. Wilt u niet via hondenschool, blijf dan zeker raad vragen aan de fokker van u pup, wat zowiezo aangeraden is. Contact met soortgenoten is ook belangrijk, ontneem uw hond dit niet.</font></span></strong></font></p>
+    <p align="left"><font size="2"><strong><span lang=""><font color="#000000">Ga kijken naar hondenscholen met een positieve aanpak. Wilt u niet via hondenschool, blijf dan zeker raad vragen aan de fokker van u pup, wat zowiezo aangeraden is. Contact met soortgenoten is ook belangrijk, ontneem uw hond dit niet.</font></span></strong></font></p>
+    <p align="center"><font size="2"><strong><span lang=""><img src="http://i20.photobucket.com/albums/b239/missy_tammy/IMG_2088a-1.jpg" alt="" width="196" height="138" />&nbsp;<span lang=""><img src="http://i162.photobucket.com/albums/t256/shamanu/meetings/DSC04488.jpg" alt="" height="138" /></span> <img alt="" src="http://i162.photobucket.com/albums/t256/shamanu/meetings/shibawandeling095.jpg" height="138" fbphotossnowboxcaption="fbPhotosSnowboxCaption" /></span></strong></font></p>
     <p align="center"><font size="2"><strong><span lang=""><img src="http://i20.photobucket.com/albums/b239/missy_tammy/IMG_2088a-1.jpg" alt="" width="196" height="138" />&nbsp;<span lang=""><img src="http://i162.photobucket.com/albums/t256/shamanu/meetings/DSC04488.jpg" alt="" height="138" /></span> <img alt="" src="http://i162.photobucket.com/albums/t256/shamanu/meetings/shibawandeling095.jpg" height="138" fbphotossnowboxcaption="fbPhotosSnowboxCaption" /></span></strong></font></p>
     <strong><font size="2"><SPAN lang=""> </font></strong>
+    <strong><font size="2"><SPAN lang=""> </font></strong>
+    <p align="left"><font size="2"><strong><font color="#cc6633">Bent u op zoek naar een goede fokker?</font></strong></font></p>
     <p align="left"><font size="2"><strong><font color="#cc6633">Bent u op zoek naar een goede fokker?</font></strong></font></p>
     <p align="left"><font size="2"><strong>Nog enkele nuttige linken om u met de verder te helpen:</strong></font></p>
+    <p align="left"><font size="2"><strong>Nog enkele nuttige linken om u met de verder te helpen:</strong></font></p>
+    <p align="left"><font size="2"><strong>&quot;<a href="http://shibasites.eigenstart.be/" target="_blank"><font color="#990000">The gate to the world of Shiba</font></a>&quot;<br />
     <p align="left"><font size="2"><strong>&quot;<a href="http://shibasites.eigenstart.be/" target="_blank"><font color="#990000">The gate to the world of Shiba</font></a>&quot;<br />
       Dit is een link collectie van alle fokkers die een website hebben per land + nog meer informatieve websites.<br />
+      Dit is een link collectie van alle fokkers die een website hebben per land + nog meer informatieve websites.<br />
+      Hou in gedachten dat een vermelding op deze site enkel komt omdat de vermelde kennel pups ter wereld zet met stamboom.<br />
       Hou in gedachten dat een vermelding op deze site enkel komt omdat de vermelde kennel pups ter wereld zet met stamboom.<br />
       Er is geen garantie van gezondheidstesten, zorg of goede socialisatie van nakomelingen en honden.<br />
+      Er is geen garantie van gezondheidstesten, zorg of goede socialisatie van nakomelingen en honden.<br />
+      Blijf dus alert en kritisch!</strong></font></p>
       Blijf dus alert en kritisch!</strong></font></p>
     <p align="left"><font size="2"><strong>&quot;<a href="http://www.akitaclub.be/" target="_blank"><font color="#990000">Belgische vereniging der Akita's en aanverwante japanse rassen</font></a>&quot;<br />
+    <p align="left"><font size="2"><strong>&quot;<a href="http://www.akitaclub.be/" target="_blank"><font color="#990000">Belgische vereniging der Akita's en aanverwante japanse rassen</font></a>&quot;<br />
+      Bij deze club is de Shiba onderverdeeld en zal u puppy nieuws meekrijgen van de leden.<br />
       Bij deze club is de Shiba onderverdeeld en zal u puppy nieuws meekrijgen van de leden.<br />
       Het is bij deze club niet verplicht gezondheidstesten uit te voeren. Evemin is er controle op een goede socialisatie van de&nbsp;nakomelingen.&nbsp;<br />
+      Het is bij deze club niet verplicht gezondheidstesten uit te voeren. Evemin is er controle op een goede socialisatie van de&nbsp;nakomelingen.&nbsp;<br />
+      Een lidmaatschap geeft op zich geen garanties. Om deze reden raden wij u ook hier&nbsp;aan kritisch te blijven in uw keuze.</strong></font></p>
       Een lidmaatschap geeft op zich geen garanties. Om deze reden raden wij u ook hier&nbsp;aan kritisch te blijven in uw keuze.</strong></font></p>
     <h1>&nbsp;</h1>
+    <h1>&nbsp;</h1>
+	<!-- end #mainContent --></div>
 	<!-- end #mainContent --></div>
   <div id="footer">
+  <div id="footer">
+    <p>Footer</p>
     <p>Footer</p>
   <!-- end #footer --></div>
+  <!-- end #footer --></div>
+<!-- end #container --></div>
 <!-- end #container --></div>
 </body>
+</body>
+</html>
 </html>
